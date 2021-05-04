@@ -1,0 +1,69 @@
+Question 1: What are different types of locators?
+            There are 8 types of locators and all are the static methods of the By class.
+            By.id(), By.name(), By.tagName(), By.className(), By.linkText(), By.partialLinkText(), 
+            By.xpath, By.cssSelector().
+Question 2: What is the difference between Assert and Verify?
+            Assert- it is used to verify the result. If the test case fail then it will stop the 
+            execution of the test case there itself and move the control to other test case.
+            
+            Verify- it is also used to verify the result. If the test case fail then it will not 
+            stop the execution of that test case.
+Question 3: How do you handle alert pop-up?
+            To handle alert pop-ups, we need to 1st switch control to alert pop-ups then click on 
+            ok or cancle then move control back to main page.
+Question 4: How to perform right click using WebDriver?
+            Use Actions class
+Question 5: Give the example for method overload in WebDriver.
+            frame(string), frame(int), frame(WebElement).
+Question 6: How do you upload a file?
+            To upload a file we can use sendKeys() method.
+            driver.findElement(By.xpath(“input field”)).sendKeys(“path of the file which u want to upload”);
+Question 7: How do you click on a menu item in a drop down menu?
+            If that menu has been created by using select tag then we can use the methods selectByValue() 
+            or selectByIndex() or selectByVisibleText(). These are the methods of the Select class.
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+Question 8:
+
+ 
