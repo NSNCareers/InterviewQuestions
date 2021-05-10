@@ -1,0 +1,192 @@
+Question 1: How do you achieve synchronization in WebDriver?
+            It is a mechanism which involves more than one components to work parallel with each other.
+            Unconditional: In this we just specify timeout value only. We will make the tool to wait until certain 
+            amount of time and then proceed further.
+            Conditional: It specifies a condition along with timeout value, so that tool waits to check for the condition 
+            and then come out if nothing happens.
+Question 2: What type of test cases to be automated?
+            Data-driven test cases
+            Test cases with higher complexity
+            Test case with many database updates
+            The test execution rate is high
+            Smoke/Critical tests
+            Tests with several combinations
+            Graph test cases
+            Higher manual execution time
+Question 3: What type of test cases not to be automated?
+            Subjective Validation
+            New Functionalities
+            Strategic Development
+            User Experience
+            Complex Functionality
+            Quality Control
+            Low return on investment
+            Installation and setup testing
+Question 4: What are the advantages of the Test Automation Framework?
+            Reusability of code.
+            Easy reporting.
+            Low-cost maintenance.
+            Maximum Coverage
+            Minimal manual intervention
+Question 5: Have you created any Framework?
+            If you are a beginner: You can say “No, I didn’t get a chance to create framework from the scratch. I have 
+            used the framework which is already available. My contribution is mostly in creating test cases by using the 
+            existing framework.”
+            If you are a beginner but have good knowledge on creating framework: You can say “Yes, I have involved in 
+            developing framework along with other automation tester in my company.”
+            If you are an experienced tester: You can say “I have contributed in developing framework.” or You can say 
+            “Yes, I have created framework from the scratch. There was no automation process in my previous company. 
+            I designed the framework from the scratch.”
+Question 6: What is Selenium WebDriver?
+            Selenium WebDriver AKA Selenium 2 is a browser automation framework that accepts commands and sends them to a 
+            browser. It is implemented through a browser-specific driver. It controls the browser by directly communicating 
+            with it. Selenium WebDriver supports Java, C#, PHP, Python, Perl, Ruby.
+Question 7: What are the testing types that can be supported by selenium?
+            Functional Testing
+            Regression Testing
+            Retesting
+            Acceptance Testing
+            End-to-End Testing
+            Smoke Testing
+            Sanity Testing
+            Responsive Testing
+            Cross Browser Testing
+            UI Testing
+            Integration Testing
+Question 8: How many parameters can selenium commands have at minimum?
+            Host
+            Port Number
+            Browser
+            URL
+Question 9: What are Soft Assert and Hard Assert in Selenium?
+            Soft Assert: Soft Assert collects errors during @Test Soft Assert does not throw an exception when an assert 
+            fails and would continue with the next step after the assert statement.
+            Hard Assert: Hard Assert throws an AssertException immediately when an assert statement fails and test suite 
+            continues with next @Test
+Question 10:What is WebDriver Wait In Selenium WebDriver?
+            WebDriverWait is applied on a certain element with defined expected condition and time. This wait is only 
+            applied to the specified element. This wait can also throw an exception when an element is not found.
+Question 11:What is Fluent Wait In Selenium WebDriver?
+            FluentWait can define the maximum amount of time to wait for a specific condition and frequency with which to 
+            check the condition before throwing an “ElementNotVisibleException” exception.
+Question 12:Implicit Waits:
+            Implicit waits tell to the WebDriver to wait for certain amount of time before it throws an exception. Once we set the 
+            time, WebDriver will wait for the element based on the time we set before it throws an exception. The default setting 
+            is 0 (zero). We need to set some wait time to make WebDriver to wait for the required time.
+Question 13:Explicit waits.
+            Explicit waits are confined to a particular web element. Explicit Wait is code you define to wait for a certain condition 
+            to occur before proceeding further in the code.
+Question 14:What is the alternative to driver.get() method to open an URL using Selenium WebDriver?
+            Alternative method to driver.get(“url”) method is driver.navigate.to(“url”)
+Question 15:What is the difference between driver.get() and driver.navigate.to(“url”)?
+            driver.get(): To open an URL and it will wait till the whole page gets loaded
+            driver.navigate.to(): To navigate to an URL and It will not wait till the whole page gets loaded
+Question 16:What are the ways to refresh a browser using Selenium WebDriver?
+            Using driver.navigate().refresh() command as mentioned in the question 45
+            Using driver.get(“URL”) on the current URL or using driver.getCurrentUrl()
+            Using driver.navigate().to(“URL”) on the current URL or driver.navigate().to(driver.getCurrentUrl());
+            Using sendKeys(Keys.F5) on any textbox on the webpage
+Question 17:What Is The Difference Between MaxSessions Vs. MaxInstances Properties in Selenium Grid?
+            MaxInstances is the no. of browser instances of the same version of the browser that can run on the remote machine.
+            Let’s see an example below:
+            -browser browserName=InternetExplorer,version=6,maxInstances=2,platform=WINDOWS
+            -browser browserName=firefox,version=11,maxInstances=2,platform=WINDOWS
+            -browser browserName=InternetExplorer,version=6,maxInstances=2,platform=WINDOWS
+            -browser browserName=firefox,version=11,maxInstances=2,platform=WINDOWS
+            As per the above example, it will allow us to run 4 instances of both IE and Firefox at the same time (in parallel) 
+            in a remote machine.
+            MaxSession says how many browsers, independent of the type & version, can run in parallel on the remote machine.
+            It supersedes the “MaxInstances” setting.
+            If maxSession=1 then no more than a single browser would run. If maxSession=2 then any of the below combinations can run 
+            at a time irrespective of what MaxInstances we have defined.
+            2 Internet Explorer
+            2 Firefox
+            1 Internet Explorer + 1 Firefox
+Question 18: How to handle hidden elements in Selenium WebDriver?
+            We can handle hidden elements by using javaScript executor
+            (JavascriptExecutor(driver)).executeScript("document.getElementsByClassName(ElementLocator).click();");
+            (JavascriptExecutor(driver)).executeScript("document.getElementsByClassName(ElementLocator).click();");
+Question 19:What is desired capabilities?
+            In Selenium we use desired capabilities to handle SSL certificates in chrome browser
+            We need to create an instance of DesiredCapabilities
+            DesiredCapabilities desiredCapability = DesiredCapabilities.chrome();
+            DesiredCapabilities desiredCapability = DesiredCapabilities.chrome();
+Question 20:How will you find more than one web element in the list using Selenium?
+            Selenium offers WebElement List for finding more than a single web element in the list. Its use is demonstrated by the following code snippet:
+            List elementList =
+            driver.findElements(By.xpath(“//div[@id=‘example’]//ul//li”));
+            Int listSize = elementList.size();
+            for (int i=0; i<listSize; i++)
+            {
+            serviceProviderLinks.get(i).click();
+            driver.navigate().back();
+            }
+Question 21:Why should Selenium be selected as a test tool?
+            is a free and open source
+            have a large user base and helping communities
+            have cross Browser compatibility (Firefox, Chrome, Internet Explorer, Safari etc.)
+            have great platform compatibility (Windows, Mac OS, Linux etc.)
+            supports multiple programming languages (Java, C#, Ruby, Python, Pearl etc.)
+            has fresh and regular repository developments
+            supports distributed testing
+Question 22:What are the different types of navigation commands?
+            navigate().back() – The above command requires no parameters and takes back the user to the previous webpage in the web browser’s history.
+            Sample code:
+            driver.navigate().back();
+            navigate().forward() – This command lets the user to navigate to the next web page with reference to the browser’s history.
+            Sample code:
+            driver.navigate().forward();
+            navigate().refresh() – This command lets the user to refresh the current web page there by reloading all the web elements.
+            Sample code:
+            driver.navigate().refresh();
+            navigate().to() – This command lets the user to launch a new web browser window and navigate to the specified URL.
+            Sample code:
+            driver.navigate().to(“https://google.com”);
+Question 23:How to handle frame in WebDriver?
+            An inline frame acronym as iframe is used to insert another document within the current HTML document or simply a web page into a web page 
+            by enabling nesting.
+            Select iframe by id
+            driver.switchTo().frame(“ID of the frame“);
+            Locating iframe using tagName
+            driver.switchTo().frame(driver.findElements(By.tagName(“iframe”).get(0));
+            Locating iframe using index
+            frame(index)
+            driver.switchTo().frame(0);
+            frame(Name of Frame)
+            driver.switchTo().frame(“name of the frame”);
+            frame(WebElement element)
+            Select Parent Window
+            driver.switchTo().defaultContent();
+Question 24:What is a framework?
+            The framework is a constructive blend of various guidelines, coding standards, concepts, processes, practices, project hierarchies, modularity, 
+            reporting mechanism, test data injections etc. to pillar automation testing.
+Question 25:Explain how you can find broken images in a page using Selenium Web driver ?
+            To find the broken images in a page using Selenium web driver is
+            Get XPath and get all the links in the page using tag name
+            In the page click on each and every link
+            Look for 404/500 in the target page title
+Question 26:What is regular expressions? How you can use regular expressions in Selenium ?
+            A regular expression is a special text string used for describing a search pattern. In Selenium IDE regular expression can be used with the keyword- 
+            regexp: as a prefix to the value and patterns needs to be included for the expected values.
+Question 27:What are core extension ?
+            If you want to “extend” the defualt functionality provided by Selenium Function Library , you can create a Core Extension. They are also called 
+            “User Extension”. You can even download ready-made Core Extension created by other Selenium enthusiats.
+Question 28:Mention what is desired capability? How is it useful in terms of Selenium?
+            The desired capability is a series of key/value pairs that stores the browser properties like browser name, browser version, the path of the browser 
+            driver in the system, etc. to determine the behavior of the browser at run time.
+            For Selenium,
+            It can be used to configure the driver instance of Selenium WebDriver.
+            When you want to run the test cases on a different browser with different operating systems and versions.
+Question 29:Selenium is an open source automation tool which is used to execute the test cases on web applications. Selenium supports various programming languages 
+            which include C#.Net , Java , Perl , PHP, Javascript etc. It supports various platforms to perform execution; some of the platforms are Windows , Linux , 
+            Mac OS, windows -10(For Edge browser) etc. It supports various browsers to execute the test cases such as Chrome browser , Internet Explorer, Firefox , 
+            Safari ,Edge etc.
+            The various components of Selenium are
+            Selenium Core
+            Selenium RC
+            Selenium IDE
+            Selenium Grid
+            Selenium webdriver.
+            Among these, Selenium core and Selenium RC (Remote Control) are part of Selenium version 1.0. Selenium IDE (Integrated Development Environment ), Grid and 
+            webdriver are part of Selenium 2.0. The popular ones in Selenium are Selenium Grid and Selenium webdriver, as most of the top organizations are preferring 
+            these in their project development.

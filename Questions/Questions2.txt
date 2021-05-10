@@ -1,0 +1,244 @@
+Question 1: What are the limitations of Selenium?
+            Doesn't supports desktop applications testing
+            Unavailability of reliable tech support, as Selenium requires a high level of expertise and resources to manage.
+            Since Selenium is open-source software, we need to rely on community forums to get technical issues resolved.
+            Doesn’t support automation tests on REST and SOAP platforms.
+            Limited support for image testing
+            No built-in reposting and test management feature
+            Need to rely on third-party tools for testing mobile and desktop applications.
+Question 2:  List the testing types supported by Selenium?
+            Acceptance testing: Determines the feature or system meets customer expectations and requirements.
+            Functional testing: Determines if a feature or system functions well without issues.
+            Performance testing: They are performed to measure how well an application is performing
+            Regression testing: Generally, this test is done after a fix, change or feature added. 
+            Test-driven development (TDD): It's an iterative development methodology in which test drives the feature design.
+            Behavior-driven development (BDD): It's also an iterative development methodology, in which the objective is to 
+            include all the parties in the development of an application. 
+Question 3: How can you click on a hyperlink in Selenium?
+            driver.findElement(By.linkText("Today's deals")).click();
+Question 4: What is StaleElementReferenceException, and how do you handle it?
+            Stale means old and no longer new. Stale element means an old element. Any element present on the webpage is considered 
+            as a web element in Web Driver. If the document object model (DOM) changes, then the web element goes stale. If we try 
+            to connect with any element that is staled, then StaleElementReferenceException is thrown.
+Question 5: What is the same-origin policy? And how can you avoid it?
+            The same-origin policy is a critical security mechanism that defines how the script or document loaded from one origin 
+            can associate with a resource from another origin. It helps to isolate potential malicious documents and rescues from 
+            attack vectors.
+            For example, for a URL http:// http://www.google.com/resources/, the origin is a combination of a google.com, http, 80 
+            correspondingly. Selenium Core (JavaScript program) cannot obtain the elements from an origin that is different from 
+            where it is launched.
+            If we have launched a JavaScript program from "http://www.google.com", then it would be easy to access pages. To handle 
+            the same-origin policy, Selenium RC was introduced. In this, the server acts as a client-configured HTTP proxy and tricks 
+            the browser into believing Selenium Core and Web application tested are from the same origin.
+Question 6: How many types of waits are there in Selenium?
+            Waits are commands in Selenium that are important for executing test scripts. 
+            There are three types of waits in Selenium, such as:
+
+            Implicit Wait Type: Implicit wait commands direct Selenium WebDriver to wait for a certain measure of time before throwing 
+            a "no such element" exception.
+            Syntax: 
+            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+            Explicit Wait Type: Explicit wait command directs WebDriver to wait until a certain condition occurs before proceeding with
+            executing the code.
+            Syntax: 
+            WebDriverWait wait = new WebDriverWait(WebDriver Reference,TimeOut);
+            Fluent Wait Type: Fluent wait command defines Selenium WebDriver to wait for a specific condition to appear. And, also 
+            determines the frequency with which Selenium Webdriver checks the state that appeared before by throwing "ElementNotVisibleException".
+            Syntax: 
+            Wait wait = new FluentWait(WebDriver reference)
+            .withTimeout(timeout, SECONDS)
+            .pollingEvery(timeout, SECONDS)
+            .ignoring(Exception.class);
+Question 7: How is the Page Object Model(POM) different from Page Factory?
+            Page Object Model is a class that represents a web page and its functionality and members. Page Factory is a way of initializing 
+            web elements you want to interact within the page object while creating an instance of it.
+Question 8: How to handle pop-ups in Selenium?
+            Robot class in Selenium is used to handle mouse and keyboard functions. It closes the pop windows. Using the WindowHandle() 
+            function, we can handle the pop-up window. By using third-party tools also we can handle pop-ups and other window-based features.
+Question 9: What is the use of switchTo() command in Selenium?
+            switchTo() Command is used to switch the focus to a new window browser, by supplying the Window Handle or Window Name as an argument 
+            to the Command.
+            driver.SwitchTo().Window(WindowHandle);
+            driver.SwitchTo().Window(WindowName);
+            To get the current Window Handle, use the following command:
+            String currentWindowHandle = driver.CurrentWindowHandle;
+Question 10:What is the major difference between "/" and "//" in Xpath?
+            Single Slash “/”: It is used to create Xpath with an absolute path that is Xpath would be created to start selection from document 
+            node/start node.
+            /html/body/div[2]/div[1]/div[1]/a
+            Double Slash "//": It is used to create Xpath with a relative path that is Xpath would be created to create start selection from 
+            anywhere within the documen
+            //div[class="qa-logo"]/a
+Question 11:How to handle frames using WebDriver?
+            The iFrame is an inline frame or web page used for inserting another document within the current HTML document. It is often used 
+            to add content from other sources like an advertisement on a web page. It is defined with the "iframe" tag.
+Question 12:What are Junit annotations?
+            Junit annotations in Selenium are used for identifying method types defined in test code. To execute Selenium WebDriver testing 
+            with JUnit, it's necessary to add Junit annotation in the script.
+            Commonly used JUnit Annotations in Selenium are listed below:
+
+            @BeforeClass
+            @Before 
+            @Test 
+            @After 
+            @AfterClass 
+            @Ignore 
+Question 13:What are the Selenium suite components?
+            Selenium IDE
+            It is a Firefox/Chrome plug-in that was developed to speed up the creation of automation scripts. It records the user actions on 
+            the web browser and exports them as a reusable script.
+            Selenium Remote Control (RC)
+            RC is a server that allows users to write application tests in various programming languages. The commands from the test script 
+            are accepted by this server and are sent to the browser as Selenium core JavaScript commands. The browser then behaves accordingly.
+            Selenium WebDriver
+            WebDriver is a programming interface that helps create and run test cases. It makes provision to act on web elements. Unlike RC, 
+            WebDriver does not require an additional server and interacts natively with the browser applications.
+            Selenium Grid
+            The grid was designed to distribute commands to different machines simultaneously. It allows the parallel execution of tests on 
+            different browsers and different operating systems. It is exceptionally flexible and is integrated with other suite components 
+            for simultaneous execution.
+Question 14:Mention the types of Web locators.
+            Locator is a command that tells Selenium IDE which GUI elements ( say Text Box, Buttons, Check Boxes, etc) it needs to operate on. 
+            Locators specify the area of action.
+            Locator by ID: It takes a string parameter which is a value of the ID attribute which returns the object to findElement() method.
+            driver.findElement(By.id(“user”));
+            Locator by the link: If your targeted element is a link text then you can use the by.linkText locator to locate that element.
+            driver.findElement(By.linkText(“Today’s deals”)).click();
+            Locator by Partial link: The target link can be located using a portion of text in a link text element.
+            driver.findElement(By.linkText(“Service”)).click();
+            Locator by Name: The first element with the name attribute value matching the location will be returned.
+            driver.findElement(By.name(“books”).click());
+            Locator by TagName: Locates all the elements with the matching tag name
+            driver.findElement(By.tagName(“button”).click());
+            Locator by classname: This finds elements based on the value of the CLASS attribute. If an element has many classes then this will 
+            match against each of them. 
+            driver.findElement(By.className(“inputtext”));
+            Locator by XPath: It takes a parameter of String which is a XPATHEXPRESSION and it returns an object to findElement() method.
+            driver.findElement(By.xpath(“//span[contains(text(),’an account’)]”)).getText();
+            Locator by CSS Selector: Locates elements based on the driver’s underlying CSS selector engine.
+            driver.findElement(By.cssSelector(“input#email”)).sendKeys(“myemail@email.com”);
+Question 15:Mention the types of navigation commands 
+            driver.navigate().to("https://www.ebay.in/"); - Navigates to the provided URL
+            driver.navigate().refresh(); - This method refreshes the current page
+            driver.navigate().forward(); - This method does the same operation as clicking on the Forward Button of any browser. It neither 
+            accepts nor returns anything.
+            driver.navigate().back(); - This method does the same operation as clicking on the Back Button of any browser. It neither accepts 
+            nor returns anything.
+Question 16:What is POM (Page Object Model)?
+            Every webpage of the application has a corresponding page class that is responsible for locating the web elements and performing 
+            actions on them. Page Object Model is a design pattern that helps create object repositories for the web elements. POM improves 
+            code reusability and readability. Multiple test cases can be run on the object repository.
+Question 17:Why should you use Selenium for test automation?
+            Is a free and open-source tool
+            Has a large user base and community support
+            Has cross-browser compatibility (Firefox, Chrome, Internet Explorer, Safari, etc.)
+            Has great platform compatibility (Windows, Mac OS, Linux, etc.)
+            Supports multiple programming languages (Java, C#, Ruby, Python, Perl, etc.)
+            Has fresh and regular repository developments
+            Supports distributed testing
+Question 18:Does Selenium have any technical limitations? If so, what are those limitations?
+            Yes, Selenium has a few limitations:
+            Testing of only web applications is possible using Selenium.
+            Testing of mobile applications or desktop applications is not possible.
+            Captcha and barcode readers cannot be tested using Selenium.
+            A third-party tool like TestNG or JUnit should be used to generate reports.
+            As Selenium is a free tool, there is no ready vendor support through which users can find various helping communities.
+            Prior programming language knowledge is expected from users.
+Question 19:What are the different types of frameworks?
+            Testing Frameworks
+            Module-based testing framework: This framework divides the entire application under test (AUT) into a number of logical 
+            and isolated modules. For each module, we create a separate and independent test script. Thus, when these test scripts 
+            are taken together, it builds a larger test script representing more than one module.
+            Library architecture testing framework: Instead of dividing AUT into test scripts, with this framework, we segregate the 
+            application into functions or rather common functions that can be used by the other parts of the application as well. 
+            Thus, we create a common library constituting common functions for AUT. Therefore, these libraries can be called from the 
+            test scripts whenever required.
+            Data-driven testing framework: The data-driven testing framework helps us segregate the test script logic and the test data 
+            from each other. It lets us store the test data into an external database. The data is conventionally stored in ‘key–value’ 
+            pairs. Keys can be used to access and populate the data within the test scripts.
+            Keyword-driven testing framework: The keyword-driven testing framework is an extension to the data-driven testing framework 
+            in the sense that it not only segregates the test data from the scripts but also keeps a certain set of codes belonging to 
+            the test script in an external data file.
+            Hybrid testing framework: A hybrid testing framework is a combination of more than one of the above-mentioned frameworks. 
+            The best thing about such a setup is that it leverages the benefits of all kinds of associated frameworks.
+            Behavior-driven development framework: The behavior-driven development framework allows the automation of functional 
+            validations in an easily readable and understandable format for Business Analysts, Developers, Testers, etc.
+Question 20:Mention the need for session handling while working with Selenium.
+            While working with Selenium, we need session handling. This is because, during test execution, Selenium WebDriver has to 
+            interact with the browser all the time to execute the given commands. It is also possible that, before the current execution 
+            completes, someone else starts the execution of another script in the same machine and in the same type of browser. So, to 
+            avoid such a situation, we need session handling.
+Question 21:What is Selenium?
+            Selenium is a popular open-source software that is used to automate web-based applications. It is a set of multiple software 
+            tools, and each tool has a different approach to automated testing.
+            Selenium has four major components, namely:
+            Selenium Integrated Development Environment
+            Selenium Remote Control
+            Selenium WebDriver
+            Selenium Grid
+Question 22:Explain how Selenium Grid works.
+            Selenium Grid creates a test suite that works by forwarding test cases to the hub, and from there, the test cases are redirected 
+            to Selenium WebDriver. WebDriver will then execute them in the browser. The test suite allows for running tests in parallel.
+            Hope you find our comprehensive blog on Selenium testing interview questions useful. Do let us know in the comments section if 
+            you could make use of these Selenium topics for interview.
+Question 23:How many types of Webdriver APIs are available in Selenium?
+            AndroidDriver,
+            ChromeDriver,
+            EventFiringWebDriver,
+            FirefoxDriver,
+            HtmlUnitDriver,
+            InternetExplorerDriver,
+            IPhoneDriver,
+            IPhoneSimulatorDriver,
+            RemoteWebDriver.
+Question 24:What are the different exceptions you face in Selenium Webdriver?
+            WebDriverException,
+            NoAlertPresentException,
+            NoSuchWindowException,
+            NoSuchElementException,
+            StaleElementException,
+            ElementNotVisibleException,
+            NullElementException,
+            TimeoutException.
+Question 25:What is the FirefoxDriver, class or an interface? And which interface does it implement?
+            FirefoxDriver is a Java class, and it implements the <WebDriver> interface. It contains the implementations of all the 
+            methods available in the <WebDriver> interface.
+Question 26:What is the use of JavaScriptExecutor?
+            JavaScriptExecutor is an interface which provides a mechanism to execute Javascript through the Selenium WebDriver. 
+            It provides “executescript” and “executeAsyncScript” methods, to run JavaScript in the context of the currently selected 
+            frame or window. An example of that is:
+            JavascriptExecutor js = (JavascriptExecutor) driver; 
+            js.executeScript(Script,Arguments);
+Question 27:Can Selenium handle window pop-ups?
+            Selenium does not support handling pop-ups. Alert is used to display a warning message. It is a pop-up window that comes 
+            up on the screen.
+            Void dismiss(): This method is called when the ‘Cancel’ button is clicked in the alert box.
+            Void accept(): This method is called when you click on the ‘OK’ button of the alert.
+            String getText(): This method is called to capture the alert message.
+            Void sendKeys(String stringToSed): This is called when you want to send some data to alert box.
+Question 28:How to handle multiple windows in Selenium?
+            A window handle is a unique identifier that holds the address of all the windows. This is basically a pointer to a window, 
+            which returns the string value.
+            get.windowhandle(): helps in getting the window handle of the current window.
+            get.windowhandles(): helps in getting the handles of all the windows opened.
+            set: helps to set the window handles which is in the form of a string.
+            switch to: helps in switching between the windows.
+            action: helps to perform certain actions on the windows.
+Question 29:What are Assert and Verify commands?
+            Assert: An assertion is used to compare the actual result of an application with the expected result.
+            Verify: There won’t be any halt in the test execution even though the verify condition is true or false.
+Question 30:  How to switch to a new window (new tab) which opens up after you click on a link?
+            If you click on a link in a web page, then for changing the WebDriver’s focus/ reference to the new 
+            window we need to use the switchTo() command. Look at the below example to switch to a new window:
+            driver.switchTo().window();
+            Here, ‘windowName’ is the name of the window you want to switch your reference to.
+            In case you do not know the name of the window, then you can use the driver.getWindowHandle() command 
+            to get the name of all the windows that were initiated by the WebDriver. Note that it will not return 
+            the window names of browser windows which are not initiated by your WebDriver.
+            Once you have the name of the window, then you can use an enhanced for loop to switch to that window. 
+            Look at the piece of code below.
+            String handle= driver.getWindowHandle();
+            for (String handle : driver.getWindowHandles()) 
+            {
+            driver.switchTo().window(handle);
+            }

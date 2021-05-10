@@ -21,49 +21,60 @@ Question 6: How do you upload a file?
 Question 7: How do you click on a menu item in a drop down menu?
             If that menu has been created by using select tag then we can use the methods selectByValue() 
             or selectByIndex() or selectByVisibleText(). These are the methods of the Select class.
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
-Question 8:
+Question 8: How do you simulate browser back and forward ?
+            driver.navigate().back();
+            driver.navigate().forward();
+Question 9: What is the difference between ‘/’ and ‘//’ ?
+            //- it is used to search in the entire structure.
+            /- it is used to identify the immediate child.
+Question 10: How do you achieve synchronization in WebDriver ?
+             Syntax- driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+             Here it will wait for 10sec if while execution driver did not find the element in the page immediately. 
+             This code will attach with each and every line of the script automatically. It is not required to write 
+             every time. Just write it once after opening the browser.
+Question 11: What are the different exceptions you got when working with WebDriver ?
+             Ans- ElementNotVisibleException, ElementNotSelectableException, NoAlertPresentException, NoSuchAttributeException, 
+             NoSuchWindowException, TimeoutException, WebDriverException etc.
+Question 12: What is Selenium Grid ?
+             Ans- Selenium-Grid allows you to run your tests on different machines against different browsers in parallel. 
+             That is, running multiple tests at the same time against different machines, different browsers and operating 
+             systems. Essentially, Selenium-Grid support distributed test execution. It allows for running your tests in a 
+             distributed test execution environment.
+Question 13: How to check if a text is highlighted on the page ?
+             To identify weather color for a field is different or not
+             String color = driver.findElement(By.xpath("//a[text()='Shop']")).getCssValue("color");
+             String backcolor = driver.findElement(By.xpath("//a[text()='Shop']")).getCssValue("background-color"
+Question 14: FirefoxDriver is class or an interface and from where is it inherited ?
+             FirefoxDriver is a class. It implements all the methods of WebDriver interface.
+Question 15: Which is the super interface of webdriver ?
+             SearchContext.
+Question 16: How do you send ENTER/TAB keys in WebDriver ?
+             Use click() or submit() [submit() can be used only when type=’submit’]) method for ENTER. Or use Actions class 
+             to press keys.
+             act.sendKeys(Keys.RETURN);
+             act.sendKeys(Keys.ENTER);
+Question 17: How to switch back from a frame ?
+             Use method defaultContent().
+             driver.switchTo().defaultContent();
+Question 18: How to press Shift+Tab ?
+             String press = Keys.chord(Keys.SHIFT,Keys.ENTER);
+             webelement.sendKeys(press);
+Question 19: How will you handle dynamic elements ?
+             By writing relative xpath.
+Question 20: What is actions class in WebDriver ?
+             Actions class is used to control the actions of mouse.
+Question 21: What are oops concepts ?
+             a) Encapsulation,
+             b) Abstraction,
+             c) Polymorphism,
+             d) Inheritance.
+Question 22: What is difference between overload and override ?
+             The methods by passing different arguments list/type is known as overloading of methods while having the 
+             same method signature with different method body is known as method overriding.
+
+
+Write a java program for swapping of two numbers ?
+Write a java program for factorial of a given number.
+
 
  
