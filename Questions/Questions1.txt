@@ -71,10 +71,3 @@ Question 21: What are oops concepts ?
 Question 22: What is difference between overload and override ?
              The methods by passing different arguments list/type is known as overloading of methods while having the 
              same method signature with different method body is known as method overriding.
-
-
-Write a java program for swapping of two numbers ?
-Write a java program for factorial of a given number.
-
-
- 
