@@ -1,0 +1,15 @@
+heap sort
+recursive algorithm
+Basic operations of the stack are: Push, Pop, Peek 
+What is a Queue, how it is different from the stack and how is it implemented
+
+hat are the differences between stack and Queue?
+Print duplicate characters from String
+Print first non repeated character from String
+Check if the given String is Palindrome
+
+Find the duplicate number on a given integer array
+The largest and smallest number in an unsorted integer array
+Calculate the average of all numbers in a given array
+How do you implement a Queue using two Stacks
+Check if a number is even or odd without using a modulo operator
