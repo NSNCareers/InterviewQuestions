@@ -1,11 +1,11 @@
 Question 1: What are the limitations of Selenium?
             Doesn't supports desktop applications testing
-            Unavailability of reliable tech support, as Selenium requires a high level of expertise and resources to manage.
-            Since Selenium is open-source software, we need to rely on community forums to get technical issues resolved.
-            Doesn’t support automation tests on REST and SOAP platforms.
-            Limited support for image testing
-            No built-in reposting and test management feature
-            Need to rely on third-party tools for testing mobile and desktop applications.
+            Unavailability of reliable tech support, as Selenium requires a high level of 
+            expertise and resources to manage.Since Selenium is open-source software, we need 
+            to rely on community forums to get technical issues resolved. Doesn’t support 
+            automation tests on REST and SOAP platforms. Limited support for image testing No 
+            built-in reposting and test management feature Need to rely on third-party tools 
+            for testing mobile and desktop applications.
 Question 2:  List the testing types supported by Selenium?
             Acceptance testing: Determines the feature or system meets customer expectations and requirements.
             Functional testing: Determines if a feature or system functions well without issues.

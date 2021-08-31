@@ -14,7 +14,22 @@ def burbleSort():
                 numbers[i+1] =numbers[i]
                 numbers[i] = temp
     print(numbers)
+
+
+def burbleSort1():
+
+    numbers = [65,28,200,12,35,43,37,85,99,1,65,3,76,59,62,5]
+    # lenght of array
+    n = len(numbers)
+    # Compare outer loop to inner loop
+    for i in range(0,n):
+        for j in range(i+1,n):
+            if numbers[i] > numbers[j]:
+                temp = numbers[j]
+                numbers[j] =numbers[i]
+                numbers[i] = temp
+    print(numbers)
             
         
 
-burbleSort()
+burbleSort1()

@@ -1,26 +1,28 @@
 Question 1: What are different types of locators?
             There are 8 types of locators and all are the static methods of the By class.
-            By.id(), By.name(), By.tagName(), By.className(), By.linkText(), By.partialLinkText(), 
-            By.xpath, By.cssSelector().
+            By.id(), By.name(), By.tagName(), By.className(), By.linkText(), 
+            By.partialLinkText(), By.xpath, By.cssSelector().
 Question 2: What is the difference between Assert and Verify?
-            Assert- it is used to verify the result. If the test case fail then it will stop the 
-            execution of the test case there itself and move the control to other test case.
-            
-            Verify- it is also used to verify the result. If the test case fail then it will not 
-            stop the execution of that test case.
+            Assert- it is used to verify the result. If the test case fail then it will stop 
+            the execution of the test case there itself and move the control to other test 
+            case.
+            Verify- it is also used to verify the result. If the test case fail then it will 
+            not stop the execution of that test case.
 Question 3: How do you handle alert pop-up?
-            To handle alert pop-ups, we need to 1st switch control to alert pop-ups then click on 
-            ok or cancle then move control back to main page.
+            To handle alert pop-ups, we need to 1st switch control to alert pop-ups then click 
+            on ok or cancle then move control back to main page.
 Question 4: How to perform right click using WebDriver?
             Use Actions class
 Question 5: Give the example for method overload in WebDriver.
             frame(string), frame(int), frame(WebElement).
 Question 6: How do you upload a file?
             To upload a file we can use sendKeys() method.
-            driver.findElement(By.xpath(“input field”)).sendKeys(“path of the file which u want to upload”);
+            driver.findElement(By.xpath(“input field”)).sendKeys(“path of the file which u want 
+            to upload”);
 Question 7: How do you click on a menu item in a drop down menu?
-            If that menu has been created by using select tag then we can use the methods selectByValue() 
-            or selectByIndex() or selectByVisibleText(). These are the methods of the Select class.
+            If that menu has been created by using select tag then we can use the methods 
+            selectByValue() or selectByIndex() or selectByVisibleText(). These are the methods 
+            of the Select class.
 Question 8: How do you simulate browser back and forward ?
             driver.navigate().back();
             driver.navigate().forward();
@@ -29,17 +31,20 @@ Question 9: What is the difference between ‘/’ and ‘//’ ?
             /- it is used to identify the immediate child.
 Question 10: How do you achieve synchronization in WebDriver ?
              Syntax- driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-             Here it will wait for 10sec if while execution driver did not find the element in the page immediately. 
-             This code will attach with each and every line of the script automatically. It is not required to write 
-             every time. Just write it once after opening the browser.
-Question 11: What are the different exceptions you got when working with WebDriver ?
-             Ans- ElementNotVisibleException, ElementNotSelectableException, NoAlertPresentException, NoSuchAttributeException, 
-             NoSuchWindowException, TimeoutException, WebDriverException etc.
+             Here it will wait for 10sec if while execution driver did not find the element in 
+             the page immediately. This code will attach with each and every line of the script 
+             automatically. It is not required to write every time. Just write it once after 
+             opening the browser.
+Question 11: What are the different exceptions you get when working with WebDriver ?
+             Ans- ElementNotVisibleException, ElementNotSelectableException, NoAlertPresentException, 
+             NoSuchAttributeException, NoSuchWindowException, TimeoutException, WebDriverException 
+             etc.
 Question 12: What is Selenium Grid ?
-             Ans- Selenium-Grid allows you to run your tests on different machines against different browsers in parallel. 
-             That is, running multiple tests at the same time against different machines, different browsers and operating 
-             systems. Essentially, Selenium-Grid support distributed test execution. It allows for running your tests in a 
-             distributed test execution environment.
+             Ans- Selenium-Grid allows you to run your tests on different machines against different 
+             browsers in parallel. That is, running multiple tests at the same time against different 
+             machines, different browsers and operating systems. Essentially, Selenium-Grid support 
+             distributed test execution. It allows for running your tests in a distributed test 
+             execution environment.
 Question 13: How to check if a text is highlighted on the page ?
              To identify weather color for a field is different or not
              String color = driver.findElement(By.xpath("//a[text()='Shop']")).getCssValue("color");
@@ -49,8 +54,8 @@ Question 14: FirefoxDriver is class or an interface and from where is it inherit
 Question 15: Which is the super interface of webdriver ?
              SearchContext.
 Question 16: How do you send ENTER/TAB keys in WebDriver ?
-             Use click() or submit() [submit() can be used only when type=’submit’]) method for ENTER. Or use Actions class 
-             to press keys.
+             Use click() or submit() [submit() can be used only when type=’submit’]) method 
+             for ENTER. Or use Actions class to press keys.
              act.sendKeys(Keys.RETURN);
              act.sendKeys(Keys.ENTER);
 Question 17: How to switch back from a frame ?
@@ -69,5 +74,6 @@ Question 21: What are oops concepts ?
              c) Polymorphism,
              d) Inheritance.
 Question 22: What is difference between overload and override ?
-             The methods by passing different arguments list/type is known as overloading of methods while having the 
-             same method signature with different method body is known as method overriding.
+             The methods by passing different arguments list/type is known as overloading of 
+             methods while having the same method signature with different method body is 
+             known as method overriding.

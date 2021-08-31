@@ -14,8 +14,16 @@ def PrintTicket(ticket):
             else:
                 rn = random.randint(0,100) 
             
-            
+
+def PrintTicket1(num):
+    lotto = []
+
+    while num >= len(lotto):
+        rn = random.randint(0,20)
+        if rn not in lotto:
+            lotto.append(rn)
+    print(lotto)
              
-PrintTicket(5)
+PrintTicket1(5)
 
 
