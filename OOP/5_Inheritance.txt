@@ -1,0 +1,29 @@
+Inheritance is an important part of the OOPS concept. In inheritance, we define parent and child 
+classes. The child class can inherit all the methods, objects and properties of the parent class. 
+A child class can also have its own methods and specific implementation.
+The parent class is also known as a base class and the child class that inherits the base class 
+is also known as derived class.
+
+public class ParentClass {
+    public ParentClass() {
+        Console.WriteLine("Parent Constructor.");
+    }
+    public void print() {
+        Console.WriteLine("I'm a Parent Class.");
+    }
+}
+public class ChildClass: ParentClass {
+    public ChildClass() {
+        Console.WriteLine("Child Constructor.");
+    }
+    public static void Main() {
+        ChildClass child = new ChildClass();
+        child.print();
+    }
+}
+
+Output
+
+Parent Constructor.
+Child Constructor.
+I'm a Parent Class.

@@ -1,0 +1,31 @@
+The software is divided into a number of small units called objects. The data and functions are 
+built around these objects. The data of the objects can be accessed only by the functions associated 
+with that object. The functions of one object can access the functions of another object. Objects 
+are the basic run-time entities of an object oriented system. They may represent a person, a place 
+or any item that the program must handle.
+
+"An object is a software bundle of related variable and methods."
+"An object is an instance of a class"
+
+A class will not occupy any memory space. Hence to work with the data represented by the class 
+you must create a variable for the class, that is called an object. When an object is created 
+using the new operator, memory is allocated for the class in the heap, the object is called an 
+instance and its starting address will be stored in the object in stack memory. When an object 
+is created without the new operator, memory will not be allocated in the heap, in other words 
+an instance will not be created and the object in the stack contains the value null. When an 
+object contains null, then it is not possible to access the members of the class using that object.
+
+class Employee
+{
+
+}
+
+Employee objEmp = new Employee();
+
+All the programming languages supporting Object Oriented Programming will be supporting these 
+four main concepts, 
+
+Abstraction
+Encapsulation
+Inheritance
+Polymorphism

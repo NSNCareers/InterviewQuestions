@@ -1,0 +1,39 @@
+Abstraction is "To represent the essential feature without representing the background details."
+Abstraction lets you focus on what the object does instead of how it does it. Abstraction provides 
+you a generalized view of your classes or objects by providing relevant information. Abstraction 
+is the process of hiding the working style of an object, and showing the information of an object 
+in an understandable manner.
+
+Real-world Example of Abstraction
+
+Suppose you have an object Mobile Phone.
+
+Suppose you have 3 mobile phones as in the following:
+
+Nokia 1400 (Features: Calling, SMS)
+Nokia 2700 (Features: Calling, SMS, FM Radio, MP3, Camera)
+Black Berry (Features:Calling, SMS, FM Radio, MP3, Camera, Video Recording, Reading E-mails)
+
+Abstract information (necessary and common information) for the object "Mobile Phone" is that 
+it makes a call to any number and can send SMS. So that, for a mobile phone object you will have 
+the abstract class as in the following,
+
+abstract class MobilePhone {
+    public void Calling();
+    public void SendSMS();
+}
+public class Nokia1400: MobilePhone {}
+public class Nokia2700: MobilePhone {
+    public void FMRadio();
+    public void MP3();
+    public void Camera();
+}
+public class BlackBerry: MobilePhone {
+    public void FMRadio();
+    public void MP3();
+    public void Camera();
+    public void Recording();
+    public void ReadAndSendEmails();
+}
+
+Abstraction means putting all the variables and methods in a class that are necessary.

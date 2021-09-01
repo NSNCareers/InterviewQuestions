@@ -1,0 +1,13 @@
+Object Oriented Programming (OOP) is a programming model where programs are organized around 
+objects and data rather than action and logic. OOP allows decomposition of a problem into a 
+number of entities called objects and then builds data and functions around these objects. A 
+class is the core of any modern Object Oriented Programming language such as C#. In OOP languages 
+it is mandatory to create a class for representing data. A class is a blueprint of an object 
+that contains variables for storing data and functions to perform operations on the data. A class 
+will not occupy any memory space and hence it is only a logical representation of data. To create 
+a class, you simply use the keyword "class" followed by the class name:
+
+class Employee
+{
+
+}

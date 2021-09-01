@@ -1,7 +1,7 @@
 {
     "python.pythonPath": "C:\\Python\\python.exe",
     "editor.fontSize": 18,
-     "window.zoomLevel": 0.8,
+     "window.zoomLevel": 2,
      "editor.quickSuggestions": {
          "other": true,
          "comments": true,

@@ -1,0 +1,97 @@
+Polymorphism is derived from the Greek dictionary, it means one with many forms. Poly stands for 
+many and Morph means forms. It allows the class in C# to have multiple implementations with the 
+same name.
+
+Polymorphism is basically divided into two parts:
+Compile-time Polymorphism
+Run time polymorphism
+
+#1) Static or Compile Time Polymorphism
+Compile-time polymorphism is also known as Static polymorphism. Method overloading is one of the 
+ways in which compile-time polymorphism is achieved. It is known as compile-time polymorphism as 
+the method calling decision is made at the time of compiling.
+
+It is achieved by keeping the method name the same but passing different sets of parameters. In 
+method overloading, the system first checks the parameter used and based on the set of parameter 
+it decides to call the appropriate method.
+
+Example:
+
+class Program {
+void print(int i, int j) {
+Console.WriteLine("Printing int: {0}", (i+j) );
+}
+void print(string a, string b) {
+Console.WriteLine("Printing String: " , (a+b));
+}
+       
+static void Main(string[] args) {
+Program prog = new Program();
+          
+// Call print for sum of integers
+prog.print(5, 6);
+          
+// Call to concatenate strings
+prog.print("Hello","World");
+Console.ReadKey();
+}
+}
+In the above example, we have called the same method “print” twice using different parameters. 
+At first, we pass two integers as parameters, then we have passed two strings as parameters. 
+There are two “print” methods with the same name.
+
+When we pass a parameter with the integers system, it will look for the method named “print” 
+which accepts two integer parameters and it will execute that ignoring other methods with the 
+same name.
+
+In the second part, we passed the string parameter. Again the system will look for the method 
+that accepts two string parameters. Hence, based on the parameters passed, the first method 
+will add two integers and the next one will concatenate two strings.
+
+#2) Dynamic Polymorphism or Runtime Polymorphism
+Runtime polymorphism or dynamic polymorphism occurs when both method name and method signature 
+have the same name and parameters. Method overriding is an example of dynamic polymorphism. It 
+allows the user to create an abstract class with partial interface implementation.
+
+Method overriding is achieved using inheritance. To achieve method overriding both the base 
+class and derived class should have the same name and parameter. During compile time the compiler 
+is not able to recognize the overriding method, hence, it doesn’t throw any error. The decision 
+to run a method is taken during runtime.
+
+Example:
+
+// Base class
+public class BaseClass
+{
+public virtual void Method1()
+{
+Console.Write("Base Class Method");
+}
+}
+// Derived class
+public class DerivedClass : BaseClass
+{
+public override void Method1()
+{
+Console.Write("Derived Class Method");
+}
+}
+// Using base and derived class
+public class Sample
+{
+public void TestMethod()
+{
+// calling the overriden method
+DerivedClass objDC = new DerivedClass();
+objDC.Method1();
+ // calling the baesd class method
+BaseClass objBC = (BaseClass)objDC;
+objDC.Method1();
+}
+}
+
+Output
+---------------------
+Derived Class Method
+
+Derived Class Method

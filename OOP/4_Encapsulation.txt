@@ -1,0 +1,40 @@
+Encapsulation is an object-oriented programming concept that allows programmers to wrap data and 
+code snippets inside an enclosure. By using the encapsulation program, you can hide the members 
+of one class from another class. It’s like encircling a logical item within a package. It allows 
+only relevant information available and visible outside and that too only to specific members.
+Encapsulation is implemented by using access specifiers. Access Specifier is used for defining the 
+visibility and accessibility of the class member in C#.
+
+C# contains the following access specifiers.
+Public
+Private
+Protected
+Internal
+
+The access specifiers define the visibility of the class and its values. It allows you to make data 
+visible for a particular part of the code and hide it from another part. The most commonly used 
+visibility is public and private.
+
+*Public: The public keyword allows its members to be visible from anywhere inside the project. 
+This access specifier has the least visibility restriction.
+*Private: The private members can only be accessed by the member within the same class. This has 
+one of the most restricted visibility.
+*Protected: Protected accessibility allows the member to be accessed from within the class and from 
+another class that inherits this class.
+*Internal: Internal provides accessibility from within the project. Another similar internal 
+accessibility is protected internal. This allows the same as the internal and the only 
+difference is that a child class can inherit this class and reach its members even from another 
+project.
+
+class Demo {
+    private int _mark;
+    public int Mark {
+        get {
+            return _mark;
+        }
+        set {
+            if (_mark > 0) _mark = value;
+            else _mark = 0;
+        }
+    }
+}
