@@ -14,7 +14,7 @@ def fib(number):
            temp = first + second
            first = second
            second = temp
-           counter = counter + 1
+           counter += 1
 
 
 # Driver Code
